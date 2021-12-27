@@ -59,7 +59,8 @@ const schemaPlanta = new Schema({
         type: String,
         unique: true,
         required: true
-    }
+    },
+    imgSrc: String
 }) 
 
 schemaPlanta.plugin(autoIncrement.plugin, 'Planta');

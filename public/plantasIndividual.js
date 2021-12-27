@@ -9,6 +9,7 @@ const frutos = document.getElementById('frutos');
 const grupo = document.getElementById("grupo");
 const necessidadeLuz = document.getElementById("necessidadeLuz");
 const habito = document.getElementById("habito");
+const imgPlanta = document.getElementById("imgPlanta")
 
 fetch(urlApi)
     .then(res => res.json())
@@ -34,6 +35,8 @@ fetch(urlApi)
             necessidadeLuz.textContent = "Alta"
 
         habito.textContent = planta.habito.charAt(0).toUpperCase() + planta.habito.slice(1);
+
+        imgPlanta.src = planta.imgSrc ? planta.imgSrc : "/imagens/grama.jpeg";
 
         console.log(planta)
     })

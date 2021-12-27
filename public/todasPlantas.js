@@ -42,7 +42,7 @@ function exibirPlantas(plantas){
                         
             nomePlanta.textContent = plantas[i].nomesPopulares[0].toUpperCase();
             nomeCientifico.textContent = 'Nome científico: ' + plantas[i].nomeCientifico;
-            imgPlanta.src = '/imagens/plantaExemplo.jpg';
+            imgPlanta.src = plantas[i].imgSrc ? plantas[i].imgSrc : "/imagens/grama.jpeg";
             divPlanta.href = "/plantas/" + plantas[i].slug;
                         
             divPlanta.appendChild(nomePlanta);
